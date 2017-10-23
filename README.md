@@ -1,6 +1,9 @@
 # CryptoBot
 
-## Requirements: [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  [Maven](https://maven.apache.org/download.cgi) [STS](https://spring.io/tools/sts)
+### Requirements: 
+##### ..* [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  
+##### ..* [Maven](https://maven.apache.org/download.cgi) 
+##### ..* [STS](https://spring.io/tools/sts)
 
 Hi guys, I uploaded my .pem file and .ppk puttygen file for you Microsoft boys ;)
 
