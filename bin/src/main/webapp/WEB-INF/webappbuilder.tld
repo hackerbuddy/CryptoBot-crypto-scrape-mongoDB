@@ -1,0 +1,30 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>Cloud4J TLD</short-name>
+    <tag>
+        <name>webContent</name>
+        <tag-class>com.uas.uportal360.web.tags.WebContentTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>webContentName</name>
+            <required>yes</required>
+            <rtexprvalue>yes</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>editable</name>
+            <required>no</required>
+            <rtexprvalue>no</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>tag</name>
+            <required>no</required>
+            <rtexprvalue>no</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>className</name>
+            <required>no</required>
+            <rtexprvalue>no</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

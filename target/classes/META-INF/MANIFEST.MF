@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: CrytoCurrencyBot
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Abudy
+Implementation-Vendor-Id: com.crytoBot.springboot
+Build-Jdk: 1.8.0_111
+Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-
+ starter-parent/CrytoCurrencyBot/
+Created-By: Maven Integration for Eclipse
+
