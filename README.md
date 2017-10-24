@@ -1,4 +1,5 @@
 # CryptoBot
+## Public DNS: http://ec2-54-164-254-145.compute-1.amazonaws.com/
 
 ### Requirements: 
 #### * [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  
@@ -11,10 +12,3 @@
 #### 3. Right click on project
 #### 4. Go to Configure->Convert to maven project
 #### 5. Right click on project and go to team->pull to verify that the repository was setup correctly on your local machine.
-
-
-Hi guys, I uploaded my .pem file and .ppk puttygen file for you Microsoft boys ;)
-
-Server public address is: ec2-54-159-223-161.compute-1.amazonaws.com  
-
-Check group text for login and pass :)
