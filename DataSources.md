@@ -6,3 +6,5 @@
   - [Trending Searches](https://github.com/GeneralMills/pytrends#trending-searches): returns data for latest trending searches shown on Google Trends' Trending Searches section.
   - [Top Charts](https://github.com/GeneralMills/pytrends#top-charts): returns the data for a given topic shown in Google Trends' Top Charts section.
   - [Suggestions](https://github.com/GeneralMills/pytrends#suggestions): returns a list of additional suggested keywords that can be used to refine a trend search.
+
+- Twitter API
