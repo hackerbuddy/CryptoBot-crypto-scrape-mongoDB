@@ -1,5 +1,6 @@
 # CryptoBot
-## Public DNS:     http://ec2-54-164-254-145.compute-1.amazonaws.com/
+## Public DNS:     ec2-54-164-254-145.compute-1.amazonaws.com
+## See GroupMe for Login and Password
 ## MySql address:  cryptodb.czf1h9vdv76q.us-east-1.rds.amazonaws.com 
 
 ### Requirements: 
