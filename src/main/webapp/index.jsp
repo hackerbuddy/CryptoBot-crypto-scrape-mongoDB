@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta http-equiv="refresh" content="0; url=/login" />
+     	<title>CryptoBots</title>   
     </head>
+    <body>
+    	<div>
+    		<h1>Welcome to cryptoBots</h1>
+    	</div>
+    </body>
 </html>
