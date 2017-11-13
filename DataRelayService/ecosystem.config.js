@@ -27,8 +27,8 @@ module.exports = {
       host: 'ec2-54-164-254-145.compute-1.amazonaws.com',
       ref: 'origin/DataRelayService',
       repo: '-b DataRelayService git@github.com:hackerbuddy/CryptoBot.git',
-      path : '/home/cryptoBoi/DataRelayService/source/DataRelayService',
-      'post-deploy': 'cd DataRelayService && npm install && pm2 reload ecosystem.config.js --env production',
+      path : '/home/cryptoBoi/DataRelayService/',
+      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
       env  : {
           "NODE_ENV": "production"
       }
