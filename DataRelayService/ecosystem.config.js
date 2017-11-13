@@ -4,7 +4,6 @@ module.exports = {
    * http://pm2.keymetrics.io/docs/usage/application-declaration/
    */
   apps : [
-    // DataRelayService
     {
       name      : 'DataRelayService',
       script    : 'app.js',
@@ -26,20 +25,12 @@ module.exports = {
     production : {
       user : 'node',
       host : '212.83.163.1',
-      ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
-      path : '/var/www/production',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
-    },
-    dev : {
-      user : 'node',
-      host : '212.83.163.1',
-      ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
-      path : '/var/www/development',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env dev',
+      ref  : 'origin/DataRelayService',
+      repo : 'https://github.com/hackerbuddy/CryptoBot.git',
+      path : '/var/www/DataRelayService',
+      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
       env  : {
-        NODE_ENV: 'dev'
+          "NODE_ENV": "production"
       }
     }
   }
