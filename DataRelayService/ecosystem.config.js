@@ -24,7 +24,7 @@ module.exports = {
   deploy : {
     production : {
       user : 'node',
-      host : '212.83.163.1',
+      host: 'ec2-54-164-254-145.compute-1.amazonaws.com',
       ref  : 'origin/DataRelayService',
       repo : 'https://github.com/hackerbuddy/CryptoBot.git',
       path : '/var/www/DataRelayService',
