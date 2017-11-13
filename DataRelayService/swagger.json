@@ -1,0 +1,117 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Welcome to CryptoBot's DataRelayService.  This service is responsible for relaying data to our UIs.",
+    "version": "1.0.0",
+    "title": "DataRelayService"
+  },
+  "tags": [
+    {
+      "name": "health",
+      "description": "Verify the status of the service"
+    },
+    {
+      "name": "optimality",
+      "description": "Investigate current market conditions"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Verify the service is active",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "The service is active"
+          }
+        }
+      }
+    },
+    "/optimality": {
+      "get": {
+        "tags": [
+          "optimality"
+        ],
+        "summary": "Check if current markets are optimal",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/Optimality"
+            }
+          }
+        }
+      }
+    },
+    "/optimality/{test}": {
+      "get": {
+        "tags": [
+          "optimality"
+        ],
+        "summary": "Test UI with specified optimality",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "test",
+            "type": "string",
+            "required": true,
+            "description": "Optimality to include in response"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/TestOptimality"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Optimality": {
+      "type": "object",
+      "properties": {
+        "optimality": {
+          "type": "string",
+          "enum": [
+            "good",
+            "bad"
+          ]
+        }
+      }
+    },
+    "TestOptimality": {
+      "type": "object",
+      "properties": {
+        "optimality": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
