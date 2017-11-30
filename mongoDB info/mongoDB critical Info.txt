@@ -1,0 +1,8 @@
+Database DNS: ec2-54-82-229-89.compute-1.amazonaws.com
+Database Port: 27017 (default for Mongodb)
+Database name: bitcoin_test
+Collection name: top100coins 
+
+Query the most recent entry:
+
+db.top100coins.find().limit(1).sort({$natural:-1}).pretty()
