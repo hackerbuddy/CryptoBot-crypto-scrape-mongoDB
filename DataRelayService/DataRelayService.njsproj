@@ -30,7 +30,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="dataAccess\bitcoinTestDataAccess.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ecosystem.config.js" />
+    <Compile Include="routes\currencies.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes\health.js">
       <SubType>Code</SubType>
     </Compile>
@@ -47,6 +53,7 @@
     <Content Include="views\error.pug" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="dataAccess\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />

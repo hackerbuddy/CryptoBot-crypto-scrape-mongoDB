@@ -12,6 +12,7 @@ var swaggerDocument = require('./swagger.json');
 var routes = require('./routes/index');
 var health = require('./routes/health');
 var optimality = require('./routes/optimality');
+var currencies = require('./routes/currencies');
 
 var app = express();
 
@@ -38,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/health', health);
 app.use('/optimality', optimality);
+app.use('/currencies', currencies);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // catch 404 and forward to error handler
