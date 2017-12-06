@@ -13,6 +13,10 @@
     {
       "name": "optimality",
       "description": "Investigate current market conditions"
+    },
+    {
+      "name": "currencies",
+      "description": "View currency details"
     }
   ],
   "schemes": [
@@ -90,6 +94,34 @@
           }
         }
       }
+    },
+    "/currencies": {
+      "get": {
+        "tags": [
+          "currencies"
+        ],
+        "summary": "Get latest top 100 cryptocurrencies",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/Currencies"
+            }
+          },
+          "500": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/CurrenciesError"
+            }
+          }
+        }
+      }
     }
   },
   "definitions": {
@@ -109,6 +141,78 @@
       "type": "object",
       "properties": {
         "optimality": {
+          "type": "string"
+        }
+      }
+    },
+    "Currency": {
+      "type": "object",
+      "properties": {
+        "weeklyPriceChange": {
+          "type": "number",
+          "format": "float"
+        },
+        "name": {
+          "type": "string"
+        },
+        "abbrev": {
+          "type": "string"
+        },
+        "marketCap": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "price": {
+          "type": "number",
+          "format": "float"
+        },
+        "volume": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "hourlyPriceChange": {
+          "type": "number",
+          "format": "float"
+        },
+        "supply": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "dailyPriceChange": {
+          "type": "number",
+          "format": "float"
+        },
+        "minable": {
+          "type": "boolean"
+        } 
+      }
+    },
+    "Currencies": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "coins": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Currency"
+          } 
+        },
+        "time": {
+          "type": "number",
+          "format": "double" 
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        } 
+      }
+    },
+    "CurrenciesError": {
+      "type": "object",
+      "properties": {
+        "errorMessage": {
           "type": "string"
         }
       }

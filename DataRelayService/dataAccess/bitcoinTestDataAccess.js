@@ -7,7 +7,7 @@ module.exports = {
     getTop100Coins: () => {
         return MongoClient.connect(url)
             .then((db) => {
-                var cursor = db.collection('top100coins').find().limit(1);
+                var cursor = db.collection('top100coins').find().sort({ time: -1 }).limit(1);
                 return cursor.toArray();
             });
     }
