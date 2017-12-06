@@ -47,6 +47,7 @@
     <Compile Include="routes\optimality.js">
       <SubType>Code</SubType>
     </Compile>
+    <Content Include="ecosystem.json" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
