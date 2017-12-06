@@ -29,7 +29,7 @@ module.exports = {
       repo: '-b DataRelayService git@github.com:hackerbuddy/CryptoBot.git',
       path : '/home/cryptoBoi/DataRelayService/',
       'post-deploy': 'cd DataRelayService && npm install && pm2 reload ecosystem.config.js --env production',
-      env  : {
+      env : {
           "NODE_ENV": "production"
       }
     }

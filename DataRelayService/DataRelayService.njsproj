@@ -33,6 +33,9 @@
     <Compile Include="dataAccess\bitcoinTestDataAccess.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="domain\currencyService.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ecosystem.config.js" />
     <Compile Include="routes\currencies.js">
       <SubType>Code</SubType>
@@ -54,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dataAccess\" />
+    <Folder Include="domain\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />

@@ -122,7 +122,44 @@
           }
         }
       }
-    }
+    },
+    "/currencies/{count}": {
+      "get": {
+        "tags": [
+          "currencies"
+        ],
+        "summary": "Get {count} latest top 100 cryptocurrencies",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "count",
+            "type": "integer",
+            "required": true,
+            "description": "Count of latest top 100 cryptocurrencies to get"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/Currencies"
+            }
+          },
+          "500": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/CurrenciesError"
+            }
+          }
+        }
+      } 
+    } 
   },
   "definitions": {
     "Optimality": {
