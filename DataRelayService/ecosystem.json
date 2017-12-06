@@ -31,7 +31,10 @@
       // Executed after cloning repo
       "post-setup": "cd source && cd DataRelayService",
       // Executed after deployment
-      "post-deploy": "npm install && pm2 reload ecosystem.json --env production"
+      "post-deploy": "npm install && pm2 reload ecosystem.json --env production",
+      "env": {
+        "NODE_ENV": "production"
+      }
     }
   }
 }
