@@ -1,3 +1,11 @@
+/**
+ * How to use:
+ * 1) Install pm2
+ * 2) Move script to a directory where your service will live
+ * 3) (First-time only) run: pm2 deploy <environment> setup
+ * 4) (First-time only)Run: pm2 deploy <environment>
+ * 5) Run: pm2 deploy <environment> update
+ */
 {
   /**
    * Application configuration section
@@ -28,7 +36,8 @@
       "ref": "origin/DataRelayService",
       "repo": "-b DataRelayService git@github.com:hackerbuddy/CryptoBot.git",
       "path": "/home/cryptoBoi/DataRelayService/",
-      "post-deploy": "cd DataRelayService && npm install && pm2 startOrRestart ecosystem.json --env production"
+      "pre-setup": "git init",
+      "post-deploy": "npm --prefix ./DataRelayService install && pm2 startOrRestart ../ecosystem.json --env production"
     }
   }
 }
