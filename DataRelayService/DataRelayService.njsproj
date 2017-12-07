@@ -36,7 +36,6 @@
     <Compile Include="domain\currencyService.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ecosystem.config.js" />
     <Compile Include="routes\currencies.js">
       <SubType>Code</SubType>
     </Compile>
