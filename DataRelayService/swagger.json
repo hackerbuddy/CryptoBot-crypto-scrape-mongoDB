@@ -111,7 +111,10 @@
           "200": {
             "description": "Successful operation",
             "schema": {
-              "$ref": "#/definitions/Currencies"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Currencies"
+              } 
             }
           },
           "500": {
@@ -148,7 +151,10 @@
           "200": {
             "description": "Successful operation",
             "schema": {
-              "$ref": "#/definitions/Currencies"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Currencies"
+              }
             }
           },
           "500": {
@@ -158,8 +164,95 @@
             }
           }
         }
-      } 
-    } 
+      }
+    },
+    "/currencies/symbol/{symbol}": {
+      "get": {
+        "tags": [
+          "currencies"
+        ],
+        "summary": "Get latest info for cryptocurrency symbol",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "symbol",
+            "type": "string",
+            "required": true,
+            "description": "Cryptocurrency symbol to get latest info for"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Currency"
+              }
+            }
+          },
+          "500": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/CurrenciesError"
+            }
+          }
+        }
+      }
+    },
+    "/currencies/symbol/{symbol}/{count}": {
+      "get": {
+        "tags": [
+          "currencies"
+        ],
+        "summary": "Get {count} latest info for cryptocurrency symbol",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "symbol",
+            "type": "string",
+            "required": true,
+            "description": "Cryptocurrency symbol to get latest info for"
+          },
+          {
+            "in": "path",
+            "name": "count",
+            "type": "integer",
+            "required": true,
+            "description": "Count of latest info for cryptocurrency symbol to get"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Currency"
+              }
+            }
+          },
+          "500": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/CurrenciesError"
+            }
+          }
+        }
+      }
+    }
   },
   "definitions": {
     "Optimality": {
@@ -183,6 +276,25 @@
       }
     },
     "Currency": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "coins": {
+          "$ref": "#/definitions/CurrencyDetails"
+        },
+        "time": {
+          "type": "number",
+          "format": "double"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "CurrencyDetails": {
       "type": "object",
       "properties": {
         "weeklyPriceChange": {
@@ -221,7 +333,7 @@
         },
         "minable": {
           "type": "boolean"
-        } 
+        }
       }
     },
     "Currencies": {
@@ -233,17 +345,17 @@
         "coins": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Currency"
-          } 
+            "$ref": "#/definitions/CurrencyDetails"
+          }
         },
         "time": {
           "type": "number",
-          "format": "double" 
+          "format": "double"
         },
         "date": {
           "type": "string",
           "format": "date-time"
-        } 
+        }
       }
     },
     "CurrenciesError": {

@@ -31,4 +31,33 @@ router.get('/:count(\\d+$)', function (req, res) {
         });
 });
 
+router.get('/symbol/:symbol', function (req, res) {
+    var symbol = req.params.symbol;
+    bitcoinTest.getSymbolInfo(symbol, 1)
+        .then((info) => {
+            res.json(info);
+        }).catch((err) => {
+            console.log(err);
+            debug(err);
+
+            res.statusCode = 500;
+            res.json({ errorMessage: err.message });
+        });
+});
+
+router.get('/symbol/:symbol/:count(\\d+$)', function (req, res) {
+    var symbol = req.params.symbol;
+    var count = parseInt(req.params.count);
+    bitcoinTest.getSymbolInfo(symbol, count)
+        .then((info) => {
+            res.json(info);
+        }).catch((err) => {
+            console.log(err);
+            debug(err);
+
+            res.statusCode = 500;
+            res.json({ errorMessage: err.message });
+        });
+});
+
 module.exports = router;
