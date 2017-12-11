@@ -3,7 +3,7 @@
 ## Members:
 - Abdul Elderrat-Front End, Axosoft
 - Braden Rucinski- Back End, Python Scrape + MongoDB 
-- Mason Flint- Web Service
+- Mason Flint- DataRelayService
 - Sonu Chavakula- Front End
 - Taylor McNeal- Python Google Trends
 
