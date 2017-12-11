@@ -28,6 +28,8 @@ You can see our Axosoft for more information on how we handled tasking.
 ## FrontEndService: 
 - Public address: http://ec2-54-164-254-145.compute-1.amazonaws.com
 - Repo: https://github.com/AbdulEldarrat/Front-End-CryptoCurrency-Bot-12-5-17-
+## BackEndService (DataRelay included):
+- Repo: https://github.com/hackerbuddy/CryptoBot
 ## DataRelayService: 
 - Public address: http://ec2-54-164-254-145.compute-1.amazonaws.com/DataRelayService/
 - Repo: https://github.com/hackerbuddy/CryptoBot/tree/DataRelayService
