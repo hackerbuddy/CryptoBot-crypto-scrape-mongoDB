@@ -13,12 +13,12 @@ CryptoBot is the name of an initiative to provide a user-friendly and secure int
 ## How did we use Agile?
 Our team used Scrum, through Axosoft, and after nearly every class, to do our "daily" Scrum standup. We broke up our project into 4 two-week sprints. 
 
-| Sprints       | Focus                   | Cool  |
-| ------------- |:----------------------: | -----:|
-| Sprint 1      | Setup Servers, Website  | $1600 |
-| Sprint 2      | Web Service and Scrape  |   $12 |
-| Sprint 3      | Switch to Node, make DB |    $1 |
-| Sprint 4      | New DB data, connect all|    $1 |
+| Sprints       | Focus                   | Accomplished |
+| ------------- |:----------------------: | ------------:|
+| Sprint 1      | Setup Servers, Website  | Yes          |
+| Sprint 2      | Web Service and Scrape  | Yes          |
+| Sprint 3      | Switch to Node, make DB |    Yes       |
+| Sprint 4      | Bitcoin Price Algorithms|    No        |
 
 
 You can see our Axosoft for more information on how we handled tasking.
