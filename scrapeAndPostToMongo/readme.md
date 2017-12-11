@@ -5,22 +5,21 @@
 "AllCoinsOneDump.py" is the main, original scraping file, that I wrote, while teaching myself Python. This program follows this process:
 
 1. Use "urlib.request" to ,ake a GET request, through a "Magic" fake browser, to go to a pretty site with rows of Data, to grab the raw HTML.
-1.5. Use "pymongo" library to make a connection to the Mongo Database, which is actually local @127.0.0.1/bitcoin_test 
-2. Use the "Beautiful Soup" library to make the <html> look pretty and make the <html> easier to parse.
-3. Use a massive nested while loop, to go through every row...
-   a. Inside of the while loop, parse to get rid of extra characters we don't want, like '%,_,$' or spaces
-   b. Inside the while loop, start building a JSON...manually. Later I learned that python supports a MUCH EASIER WAY to make jsons. Oh well. 
-   c. At the end of each nested iteration, append data to the JSON string
-     c1.use a imported "module", really a method, from my newScrapeYearly.py file, to add additional data, such as monthly, yearly price change
+2. Use "pymongo" library to make a connection to the Mongo Database, which is actually local @127.0.0.1/bitcoin_test 
+3. Use the "Beautiful Soup" library to make the <html> look pretty and make the <html> easier to parse.
+4. Use a massive nested while loop, to go through every row...
+   A. Inside of the while loop, parse to get rid of extra characters we don't want, like '%,_,$' or spaces
+   B. Inside the while loop, start building a JSON...manually. Later I learned that python supports a MUCH EASIER WAY to make jsons. Oh well. 
+   C. At the end of each nested iteration, append data to the JSON string
+     ****use a imported "module", really a method, from my newScrapeYearly.py file, to add additional data, such as monthly, yearly price change
         to the data
-   d. After the 10th row is complete, close the JSON
-   e. Check if the currency's name, like 'Bitcoin', is one of the coins that we are following
+   D. After the 10th row is complete, close the JSON
+   E. Check if the currency's name, like 'Bitcoin', is one of the coins that we are following
         e1. if it is one of the special coins, insert this JSON into the special individual database
-   f. Add the little currency JSON to the BIG "allCoins" jSOn string
+   F. Add the little currency JSON to the BIG "allCoins" jSOn string
    
-4. Once we have made our big JSON string, use ast.literal to convert the string into a real JSON, with real types like float, string, etc
-    4a. If the data is bad--aka--the scraping failed, or the site changed, this process will fail
-5. Dump the very large JSON as an entry
+5. Once we have made our big JSON string, use ast.literal to convert the string into a real JSON, with real types like float, string, etc. NOTE-- If the data is bad--aka--the scraping failed, or the site changed, this process will fail
+6. Dump the very large JSON as an entry into the 'top100coins' "collection" in MongoDB
 
 ## Notes about Scraping and learning Python, and some weird python quirks
 
