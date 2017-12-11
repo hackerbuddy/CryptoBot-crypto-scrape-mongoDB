@@ -23,17 +23,35 @@ Our team used Scrum, through Axosoft, and met after nearly every class for our "
 
 You can see our Axosoft for more information on how we handled tasking.
 
-## ScrapeyServer: 
+
+## Accomplishments
+### Web Service
+Our team successfully used multiple servers to create a RESTful Web Service, which communicates to the Back-end server. This was not a required aspect of the project, but Mason had experience with Web Services, and worked with Abdul to use Node.js to enable the servers to communicate remotely and securely.
+### Single Page App
+Sonu made a sexy looking website with Bootstrap early on, while we struggled to get the rest of the components working together
+### Automated Scraping and Data Storage
+Braden managed to scrape very useful data about Bitcoin and other Cryptocurrencies from multiple websites, which is then stored into our remote Database every minute. This data was not available through an API, so he did things the hard way. 
+## Challenges
+### Busyness
+Many of our team members had a very difficult, hectic school schedule and part-time jobs this semester,  which made it difficult to meet. At one point of the semester, progress nearly halted, because everyone was sick or had to go to work. Meeting regularly after class helped a great deal to keep things on track.
+### Deadline
+Taylor worked with 2 really cool API's through Python--- a GoogleTrends API to find how many searches are being processed with a certain keyword, and also a Twitter API. The plan was to use algorithms, including data from these additional sources, to predict cryptocurrency prices, with some degree of accuracy. Unfortunately, we ran out of time to do this. However, the data and front end is ready, which is our Minimum Viable Product!
+## Next Steps
+Some team members wish to continue working with CryptoBot, after the project is submitted. Some of the obvious next steps are to find a more reliable data source, and work on back-end algorithms for computing prices. We would like to incorporate Taylor's API's to do some cool data-crunching, as well as incorporate some machine learning with Python, if possible. We would also like to put the Web Service on its own server-- this was our original intention.
+## Additional Info
+Below are a few of our important DNS addresses. We have a front-end/web-service server, a mySQL database, and a backend scraping/MongoDB server
+
+### ScrapeyServer: 
 - ec2-54-82-229-89.compute-1.amazonaws.com
-## FrontEndService: 
+### FrontEndService: 
 - Public address: http://ec2-54-164-254-145.compute-1.amazonaws.com
 - Repo: https://github.com/AbdulEldarrat/Front-End-CryptoCurrency-Bot-12-5-17-
-## BackEndService (DataRelay included):
+### BackEndService (DataRelay included):
 - Repo: https://github.com/hackerbuddy/CryptoBot
-## DataRelayService: 
+### DataRelayService: 
 - Public address: http://ec2-54-164-254-145.compute-1.amazonaws.com/DataRelayService/
 - Repo: https://github.com/hackerbuddy/CryptoBot/tree/DataRelayService
-## AxoSoft Scrum Board:
+### AxoSoft Scrum Board:
 - https://abdul.axosoft.com/
-## MySql Server: 
+### MySql Server: 
 - cryptodb.czf1h9vdv76q.us-east-1.rds.amazonaws.com 
