@@ -1,4 +1,4 @@
-# Some notes About Scraping, Mongo and Python
+# Scraping and dumping into MongoDB with Python
 
 ## "AllCoinsOneDump" Structure
 
@@ -23,7 +23,7 @@
 
 ### Mistakes
 When I first started writing this python script, I was new to python and was a little intimidated by the odd syntax, even the syntax of 
-for loops in python. Even the methods and functions looked pretty weird. So I avoided them == MISTAKE
+for-loops in python. Even the methods and functions looked pretty weird. So I avoided them == MISTAKE
 
 I kept on adding to the python script, and I'm not gonna lie, the nested while loop is a NIGHTMARE to follow. I did a few things to clean it up, but really, what it needs is modules. 
 
