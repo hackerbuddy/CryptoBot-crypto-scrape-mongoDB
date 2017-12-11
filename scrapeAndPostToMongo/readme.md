@@ -1,6 +1,6 @@
-#Some notes About Scraping, Mongo and Python
+# Some notes About Scraping, Mongo and Python
 
-##"AllCoinsOneDump" Structure
+## "AllCoinsOneDump" Structure
 
 "AllCoinsOneDump.py" is the main, original scraping file, that I wrote, while teaching myself Python. This program follows this process:
 
@@ -22,9 +22,9 @@
     4a. If the data is bad--aka--the scraping failed, or the site changed, this process will fail
 5. Dump the very large JSON as an entry
 
-##Notes about Scraping and learning Python, and some weird python quirks
+## Notes about Scraping and learning Python, and some weird python quirks
 
-###Mistakes
+### Mistakes
 When I first started writing this python script, I was new to python and was a little intimidated by the odd syntax, even the syntax of 
 for loops in python. Even the methods and functions looked pretty weird. So I avoided them == MISTAKE
 
@@ -33,18 +33,20 @@ I kept on adding to the python script, and I'm not gonna lie, the nested while l
 Python does not directly support case statements--- that is why there are 500 "elifs". You can use python "dictionaries" to emulate a case
 statement. I think I would try this next time. 
 
-###Python Dictionaries and JSON
+### Python Dictionaries and JSON
 Python's dictionaries are very powerful. They are basically json lists, which you can put anything inside. I didn't realize I could just make a bunch of python dictionaries when I started this project, so I PAINFULLY hand crafted a bunch of hardcoded strings. Ugly, but it 
 worked. It would have been much quicker and more readable to use Python Dictionaries.
 
-###My Code Improved
+### My Code Improved
 I did eventually clean up my code, by using the newYearlyScrape python file that I wrote recently. I had practiced a lot more python by this point, so I created a few helper functions, and used the real python FOR-LOOP, which is actually, very powerful.
 
-###The Future of Python in this project?
+### The Future of Python in this project?
 Frankly, I only used Python to scrape because I couldn't find an API that had the data that I wanted. Scraping is a weird skill, that, while it is fun and rewarding, it really has no place in this project. This project badly needs a real data source, through a web service, that we can store stuff into our database. 
 
 The moment I find a data source that I can use, even pay for, to get historical prices and data, we will move in that direction. Until that point, we can't call this a commercial venture.
 
+### Conclusion
+I learned a LOT about using MongoDB, and a LOT about scraping, from this project. I certainly need to find another data source ASAP, and when we move in this direction, I may discontinue using Python. 
 
 
 
