@@ -1,11 +1,11 @@
 # CryptoBot
 
 ## Members:
-- Abdul Elderrat-Front End, Axosoft
-- Braden Rucinski- Back End, Python Scrape + MongoDB 
-- Mason Flint- DataRelayService
-- Sonu Chavakula- Front End
-- Taylor McNeal- Python Google Trends
+- Abdul Elderrat: Front End, Scrum master 
+- Braden Rucinski: Back End, Python Scrape + MongoDB, Product owner 
+- Mason Flint: DataRelayService, Dev team
+- Sonu Chavakula: Front End, Dev team
+- Taylor McNeal: Python Google Trends, Dev team
 
 ## What is CryptoBot?
 CryptoBot is the name of an initiative to provide a user-friendly and secure interface for users to utilize automated trading algorithms for various cryptocurrencies.  Our current data-flow utilizes several python programs to populate databases with trading information.  The DataRelayService is a layer of abstraction between our user-interfaces and our databases.  Its purpose is to simplify transfer of data between multiple user-interfaces by keeping our queries in one location.  This allows us to only make changes to the DataRelayService should our underlying database architecture change at any point instead of modifying each individual user-interface.  Our DataRelayService then provides information to our user-interfaces, so that our users can see pertinent information for our trading algorithms.
