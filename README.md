@@ -31,5 +31,7 @@ You can see our Axosoft for more information on how we handled tasking.
 ## DataRelayService: 
 - Public address: http://ec2-54-164-254-145.compute-1.amazonaws.com/DataRelayService/
 - Repo: https://github.com/hackerbuddy/CryptoBot/tree/DataRelayService
+## AxoSoft Scrum Board:
+- https://abdul.axosoft.com/
 ## MySql Server: 
 - cryptodb.czf1h9vdv76q.us-east-1.rds.amazonaws.com 
