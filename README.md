@@ -30,7 +30,7 @@ Our team successfully used multiple servers to create a RESTful Web Service, whi
 ### Single Page App
 Sonu made a sexy looking website with Bootstrap early on, while we struggled to get the rest of the components working together
 ### Automated Scraping and Data Storage
-Braden managed to scrape very useful data about Bitcoin and other Cryptocurrencies from multiple websites, which is then stored into our remote Database every minute. This data was not available through an API, so he did things the hard way. 
+Braden managed to [scrape very useful data about Bitcoin and other Cryptocurrencies](https://github.com/hackerbuddy/CryptoBot/tree/master/scrapeAndPostToMongo) from multiple websites, which is then stored into [our remote Mongo Database](https://github.com/hackerbuddy/CryptoBot/tree/master/mongoDB%20info) every minute. This data was not available through an API, so he did things the hard way. 
 ## Challenges
 ### Busyness
 Many of our team members had a very difficult, hectic school schedule and part-time jobs this semester,  which made it difficult to meet. At one point of the semester, progress nearly halted, because everyone was sick or had to go to work. Meeting regularly after class helped a great deal to keep things on track.
