@@ -33,7 +33,7 @@
     <Compile Include="dataAccess\bitcoinTestDataAccess.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="domain\currencyService.js">
+    <Compile Include="domain\optimalityService.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes\currencies.js">
