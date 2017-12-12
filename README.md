@@ -21,7 +21,7 @@ Our team used Scrum, through Axosoft, and met after nearly every class for our "
 | Sprint 1      | Setup Servers, Website  |     Yes      |
 | Sprint 2      | Web Service and Scrape  |     Yes      |
 | Sprint 3      | Switch to Node, make DB |     Yes      |
-| Sprint 4      | Bitcoin Price Algorithms|     No       |
+| Sprint 4      | Bitcoin Price Algorithms|     Yes      |
 
 
 You can see our Axosoft for more information on how we handled tasking.
@@ -38,7 +38,7 @@ Braden managed to [scrape very useful data about Bitcoin and other Cryptocurrenc
 ### Busyness
 Many of our team members had a very difficult, hectic school schedule and part-time jobs this semester,  which made it difficult to meet. At one point of the semester, progress nearly halted, because everyone was sick or had to go to work. Meeting regularly after class helped a great deal to keep things on track.
 ### Deadline
-Taylor worked with 2 really cool API's through Python--- a GoogleTrends API to find how many searches are being processed with a certain keyword, and also a Twitter API. The plan was to use algorithms, including data from these additional sources, to predict cryptocurrency prices, with some degree of accuracy. Unfortunately, we ran out of time to do this. However, the data and front end is ready, which is our Minimum Viable Product!
+Taylor worked with 2 really cool API's through Python--- a GoogleTrends API to find how many searches are being processed with a certain keyword, and also a Twitter API. The plan was to use algorithms, including data from these additional sources, to predict cryptocurrency prices, with some degree of accuracy. Unfortunately, we ran out of time to do this. However, the data and front end is ready, which is our Minimum Viable Product! A basic prediction of whether to buy or not is currently running on the website, yet it does not involve the Twitter or Google Trends data.
 ## Next Steps
 Some team members wish to continue working with CryptoBot, after the project is submitted. Some of the obvious next steps are to find a more reliable data source, and work on back-end algorithms for computing prices. We would like to incorporate Taylor's API's to do some cool data-crunching, as well as incorporate some machine learning with Python, if possible. We would also like to put the Web Service on its own server-- this was our original intention.
 ## Additional Info
