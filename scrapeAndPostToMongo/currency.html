@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+  <head>
+    <title>Currencies</title>
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../css/custom_style.css">
+      
+    <script>
+        
+        var x = 1;
+        var y = ["", "", ""];
+        getSuggestions();
+        
+        function convertSuggestions () {
+            for (var i = 0; i < 3; i++) {
+                if (y[i] == "good")
+                    y[i] = "Buy";
+                else
+                    y[i] = "Don't Buy";
+            }
+        }
+        
+        function getSuggestions () {
+            var xmlHttp = new XMLHttpRequest();
+            
+            xmlHttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(this.responseText);
+                    y[0] = data[0].optimality;
+                    y[1] = data[1].optimality;
+                    y[2] = data[2].optimality;
+                    convertSuggestions();
+                }
+            };
+            
+            var url = "http://ec2-54-164-254-145.compute-1.amazonaws.com/DataRelayService/optimality";
+            xmlHttp.open("GET", url, true);
+            xmlHttp.send();
+        }
+      
+        function printCoin (data) {
+            document.getElementById('loading').style.display = "none";
+            var cTable = document.getElementById('coinTable');
+            var tab = "<tr>";
+            tab += "<tr>";
+            tab += "<td>" + x + "</td>";
+            x++;
+            tab += "<td>" + data[0].coins.abbrev + "</td>";
+            tab += "<td>" + data[0].coins.name + "</td>";
+            tab += "<td>$" + data[0].coins.marketCap + "</td>";
+            tab += "<td>$" + data[0].coins.price + "</td>";
+            tab += "<td>" + data[0].coins.hourlyPriceChange + "%</td>";
+            tab += "<td>" + data[0].coins.dailyPriceChange + "%</td>";
+            tab += "<td>" + data[0].coins.weeklyPriceChange + "%</td>";
+            
+            var sugg;
+            if (data[0].coins.abbrev == "BTC")
+                sugg = y[0];
+            else if (data[0].coins.abbrev == "ETH")
+                sugg = y[1];
+            else
+                sugg = y[2];
+            tab += "<td>" + sugg + "</td>";
+            tab += "</tr>";
+            cTable.innerHTML += tab;
+        }
+        
+        function getContent (symbol) {
+            var xmlHttp = new XMLHttpRequest();
+            
+            xmlHttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(this.responseText);
+                    printCoin(data);
+                }
+            };
+            
+            var url = "http://ec2-54-164-254-145.compute-1.amazonaws.com/DataRelayService/currencies/symbol/" + symbol;
+            xmlHttp.open("GET", url, true);
+            xmlHttp.send();
+        }
+      
+    </script>
+      
+  </head>
+  
+  <body>
+  
+  <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="../index.html" class="w3-bar-item w3-button bitcoinregular">CryptoBank</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="../index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="currency.html" class="w3-bar-item w3-button">Currencies</a>
+      <a href="login.html" class="w3-bar-item w3-button">Login</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+    <div class="container w3-content">
+        
+        <br><br>
+        
+    	<table>
+            <tbody id="coinTable">
+    		<tr>
+    			<td>#</td>
+    			<td>Symbol</td>
+    			<td>Name</td>
+    			<td>Market Cap</td>
+    			<td>Price</td>
+    			<td>1Hr%</td>
+    			<td>24Hr%</td>
+    			<td>7d%</td>
+                <td>Suggestion</td>
+    		</tr>
+                
+            <tr>
+                <td colspan="9" id="loading">Loading Currency Data...</td>
+            </tr>
+            
+            <script>
+                getContent('LTC');
+                getContent('ETH');
+                getContent('BTC');
+            </script>
+                
+            </tbody>
+    	</table>
+    </div>	
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/new-age.min.js"></script>
+
+
+  </body>
+</html>
+  	
+<script>  	
+var request = require("request");
+
+router.get('/external-api', function(req, res){;
+
+  request("http://www.google.com", function(error, response, body){
+    console.log('error:', error); // Print the error if one occurred and handle it
+    console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+    res.send(body)
+  });
+})
+
+</script>
