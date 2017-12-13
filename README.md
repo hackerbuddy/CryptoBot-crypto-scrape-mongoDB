@@ -45,9 +45,9 @@ Some team members wish to continue working with CryptoBot, after the project is 
 Below are a few of our important DNS addresses. We have a front-end/web-service server, a mySQL database, and a backend scraping/MongoDB server
 
 ### ScrapeyServer: 
-- ec2-54-82-229-89.compute-1.amazonaws.com
--Repo: https://github.com/hackerbuddy/CryptoBot/tree/master/mongoDB%20info
--Repo: https://github.com/hackerbuddy/CryptoBot/tree/master/scrapeAndPostToMongo
+- Public address:  ec2-54-82-229-89.compute-1.amazonaws.com
+-Database Repo: https://github.com/hackerbuddy/CryptoBot/tree/master/mongoDB%20info
+-Scrape and Data input Repo: https://github.com/hackerbuddy/CryptoBot/tree/master/scrapeAndPostToMongo
 ### FrontEndService: 
 - Public address: http://ec2-54-164-254-145.compute-1.amazonaws.com
 - Repo: https://github.com/AbdulEldarrat/Front-End-CryptoCurrency-Bot-12-5-17-
