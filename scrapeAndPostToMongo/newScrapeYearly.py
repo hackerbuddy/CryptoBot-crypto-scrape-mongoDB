@@ -150,7 +150,7 @@ def findYearlyData(stringy):
 		#print("wow!!! " + stringy + " has data, which is " + splicerDict[stringy])
 		return splicerDict[stringy]
 	else:
-		print("awwww fuck mann couldn't find anything")
+		print("mann couldn't find anything")
 		return 'nothing'
 		
 #monthYearlyScrape()
