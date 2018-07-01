@@ -1,11 +1,5 @@
-Database DNS: ec2-54-82-229-89.compute-1.amazonaws.com
-Database Port: 27017 (default for Mongodb)
-Database name: bitcoin_test
-Collection name: top100coins 
 
-********command line to connect to mongo: 
 
-sudo mongo -u OverlordMason -p kingOfTheCastle ec2-54-82-229-89.compute-1.amazonaws.com/bitcoin_test
 
 ************************************
 
